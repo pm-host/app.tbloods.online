@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Tblood - Installation Video</title>
+
+    <link rel="icon" href="tblood.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <nav class="navbar">
+        <a href="https://www.tbloods.online/" class="logo">
+            <img src="tblood.png" alt="Tblood Logo" />
+            Tblood
+        </a>
+
+        <div class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Video Section -->
+        <section id="video-section" class="section-padding">
+            <div class="container fade-in">
+                <h2>How to Install <span style="color: #ffdd40;">Tblood</span> App</h2>
+                <p>Follow our step by step video guide to easily download and install Tblood app on your Android device</p>
+                
+                <div class="video-wrapper">
+                    <div class="video-player">
+                        <video id="tutorialVideo" poster="tblood-video-thumbnail.jpg">
+                            <source src="tblood-app-installation-tutorial.mp4" type="video/mp4">
+                            <!-- Add more sources for different formats if available -->
+                            <!-- <source src="video.webm" type="video/webm"> -->
+                            Your browser does not support video tag.
+                        </video>
+                        
+                        <!-- Loading Spinner -->
+                        <div class="loading-spinner" id="loadingSpinner"></div>
+                        
+                        <!-- Captions Display -->
+                        <div class="captions-display" id="captionsDisplay"></div>
+                        
+                        <!-- Stats Overlay -->
+                        <div class="stats-overlay" id="statsOverlay"></div>
+                        
+                        <!-- Playback Rate Display -->
+                        <div class="playback-rate-display" id="playbackRateDisplay">1x</div>
+                        
+                        <!-- Video Overlay with Play Button -->
+                        <div class="video-overlay" id="videoOverlay">
+                            <div class="play-button" id="playButton">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Quality Selector -->
+                        <div class="quality-selector" id="qualitySelector">
+                            <button class="quality-btn" data-quality="auto">Auto</button>
+                            <button class="quality-btn" data-quality="1080">1080p</button>
+                            <button class="quality-btn" data-quality="720">720p</button>
+                            <button class="quality-btn" data-quality="480">480p</button>
+                        </div>
+                        
+                        <!-- Video Controls -->
+                        <div class="video-controls" id="videoControls">
+                            <div class="progress-bar" id="progressBar">
+                                <div class="progress-buffered" id="progressBuffered"></div>
+                                <div class="progress-filled" id="progressFilled"></div>
+                                <div class="progress-hover" id="progressHover"></div>
+                                <div class="progress-tooltip" id="progressTooltip">0:00</div>
+                            </div>
+                            <div class="controls-row">
+                                <div class="controls-left">
+                                    <button class="control-btn" id="playPauseBtn" title="Play/Pause">
+                                        <i class="fas fa-play"></i>
+                                        <span class="tooltip">Play/Pause</span>
+                                    </button>
+                                    <button class="control-btn" id="stopBtn" title="Stop">
+                                        <i class="fas fa-stop"></i>
+                                        <span class="tooltip">Stop</span>
+                                    </button>
+                                    <button class="control-btn" id="skipBackBtn" title="Skip Back 10s">
+                                        <i class="fas fa-backward"></i>
+                                        <span class="tooltip">Skip Back 10s</span>
+                                    </button>
+                                    <button class="control-btn" id="skipForwardBtn" title="Skip Forward 10s">
+                                        <i class="fas fa-forward"></i>
+                                        <span class="tooltip">Skip Forward 10s</span>
+                                    </button>
+                                    <div class="time-display" id="timeDisplay">0:00 / 0:00</div>
+                                </div>
+                                <div class="controls-right">
+                                    <div class="volume-container">
+                                        <button class="control-btn" id="volumeBtn" title="Mute/Unmute">
+                                            <i class="fas fa-volume-up"></i>
+                                            <span class="tooltip">Mute/Unmute</span>
+                                        </button>
+                                        <div class="volume-slider" id="volumeSlider">
+                                            <div class="volume-filled" id="volumeFilled"></div>
+                                        </div>
+                                    </div>
+                                    <button class="control-btn" id="qualityBtn" title="Quality">
+                                        <i class="fas fa-cog"></i>
+                                        <span class="tooltip">Quality Settings</span>
+                                    </button>
+                                    <select class="speed-selector" id="speedSelector" title="Playback Speed">
+                                        <option value="0.5">0.5x</option>
+                                        <option value="0.75">0.75x</option>
+                                        <option value="1" selected>1x</option>
+                                        <option value="1.25">1.25x</option>
+                                        <option value="1.5">1.5x</option>
+                                        <option value="2">2x</option>
+                                    </select>
+                                    <button class="control-btn" id="pipBtn" title="Picture in Picture">
+                                        <i class="fas fa-picture-in-picture"></i>
+                                        <span class="tooltip">Picture in Picture</span>
+                                    </button>
+                                    <button class="fullscreen-btn" id="fullscreenBtn" title="Fullscreen">
+                                        <i class="fas fa-expand"></i>
+                                        <span class="tooltip"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="steps-container">
+                    <div class="step-card fade-in">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Download APK</h3>
+                        <p class="step-description">Click the download button to get the Tblood APK file to your device</p>
+                    </div>
+                    <div class="step-card fade-in" style="transition-delay: 0.1s;">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Enable Unknown Sources</h3>
+                        <p class="step-description">Go to Settings > Security and enable "Install from Unknown Sources"</p>
+                    </div>
+                    <div class="step-card fade-in" style="transition-delay: 0.2s;">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">Install the App</h3>
+                        <p class="step-description">Open the downloaded file and follow the on-screen instructions</p>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <a href="index.html" class="action-btn secondary">
+                        <i class="fas fa-arrow-left"></i> Back to Download
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Social Link Section -->
+    <section class="py-8 bg-white text-primary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center" style="font-family: 'Montserrat', sans-serif; color: #c62828;">Connect With Us</h2>
+            <div class="flex justify-center space-x-6 flex-wrap">
+                <a href="https://www.facebook.com/tbloodonline" class="social-icon text-blue-600 hover:text-blue-800">
+                    <i class="fab fa-facebook text-2xl"></i>
+                </a>
+                <a href="https://www.tbloods.online/Mail-Tblood.html" class="social-icon text-red-500 hover:text-red-700">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="tblood-gradient text-white pt-16 pb-8 relative">
+        <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-accent to-primary"></div>
+        <div class="container mx-auto px-4">
+            <footer role="contentinfo">
+                <div class="footer-content">
+                    <div class="footer-column">
+                        <p style="font-family: 'Open Sans', sans-serif; color: white;">Donate blood. Save lives. Build community.</p>
+                        <div class="social-section">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-300 mb-4 md:mb-0" style="font-family: 'Open Sans', sans-serif;">&copy; 2025 Tblood. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="https://www.tbloods.online/Privacy-Policy" class="text-gray-300 hover:text-accent transition" style="font-family: 'Open Sans', sans-serif;">Privacy Policy</a>
+                        <a href="https://www.tbloods.online/Terms-of-Service" class="text-gray-300 hover:text-accent transition" style="font-family: 'Open Sans', sans-serif;">Terms of Service</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </footer>
+
+    <script src="appinstallvideo.js"></script>
+    <link rel="stylesheet" href="appinstallvideo.css"> 
+
+</body>
+</html>
